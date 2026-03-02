@@ -1,86 +1,78 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
-    background-color: #f5f7fa;
+    background: linear-gradient(135deg, #f0f4f8, #e6f0ff);
     color: #333;
 }
 
 .header {
-    background-color: #2ecc71;
-    padding: 20px;
+    background: linear-gradient(90deg, #2ecc71, #27ae60);
+    padding: 25px;
     text-align: center;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .header h1 {
     color: white;
     margin: 0;
     font-size: 32px;
+    letter-spacing: 1px;
 }
 
 .container {
     width: 90%;
+    max-width: 1000px;
     margin: auto;
-    padding: 20px;
-    text-align: center;
-}
-
-input {
-    padding: 10px;
-    width: 250px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-button {
-    padding: 10px 15px;
-    background-color: #2ecc71;
-    border: none;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #27ae60;
+    padding: 30px 20px;
 }
 
 .search-box {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .search-box input {
     width: 60%;
+    padding: 12px;
+    border-radius: 8px;
     border: 1px solid #ccc;
+    font-size: 15px;
 }
 
 .search-box button {
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: none;
     background-color: #2ecc71;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .search-box button:hover {
     background-color: #27ae60;
 }
 
+.meal-card,
+.meal-details,
+.stats-card,
+#savedMeals > div {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.meal-card:hover,
+#savedMeals > div:hover {
+    transform: translateY(-4px);
+}
+
 .meal-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-}
-
-.meal-card {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
-    padding-bottom: 10px;
-}
-
-.meal-card:hover {
-    transform: scale(1.03);
 }
 
 .meal-card img {
@@ -90,14 +82,11 @@ button:hover {
 }
 
 .meal-card h3 {
-    padding: 10px;
+    padding: 12px;
 }
 
 .meal-details {
-    background: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .meal-details img {
@@ -105,14 +94,24 @@ button:hover {
     max-height: 350px;
     object-fit: cover;
     border-radius: 10px;
+    margin-bottom: 15px;
 }
 
-.btn-add {
-    background-color: #3498db;
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 5px 3px;
+    background-color: #2ecc71;
+    color: white;
 }
 
-.btn-add:hover {
-    background-color: #2c80b4;
+button:hover {
+    background-color: #27ae60;
 }
 
 .btn-delete {
@@ -123,13 +122,26 @@ button:hover {
     background-color: #c0392b;
 }
 
+input[type="text"] {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.stats-card {
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
 a {
-    transition: 0.3s;
+    text-decoration: none;
     font-weight: bold;
+    color: #3498db;
+    transition: 0.3s;
 }
 
 a:hover {
-    opacity: 0.8;
+    color: #1f6691;
 }
 
 .footer {
@@ -137,5 +149,60 @@ a:hover {
     padding: 15px;
     background-color: #2ecc71;
     color: white;
-    margin-top: 30px;
+    margin-top: 40px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    padding: 40px 20px;
+    border-radius: 15px;
+    color: white;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.hero h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.hero input {
+    width: 60%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin-right: 10px;
+}
+
+.hero button {
+    background: white;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.hero button:hover {
+    background: #f1f1f1;
+}
+
+#savedMeals input {
+    width: 60%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #333;
+    pointer-events: auto;
+    opacity: 1 ;
+}
+
+.instructions-box {
+    max-height: 150px;
+    overflow-y: auto;
+    text-align: left;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
 }
