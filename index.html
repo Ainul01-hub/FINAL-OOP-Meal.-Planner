@@ -7,18 +7,28 @@
 <body>
 
 <div class="header">
-    <h1>MEAL PLANNER</h1>
+    <h1> ~ MealMate ~ </h1>
 </div>
 
-<div class="container"></div>
+<div class="container">
 
-<input type="text" id="searchInput" placeholder="Search meal...">
-<button onclick="searchMeal()">Search</button>
+    <div class="hero">
+        <h2>Find Your Perfect Meal </h2>
+        <p>Search delicious recipes and add them to your planner.</p>
+        <input type="text" id="searchInput" placeholder="Search meal...">
+        <button onclick="searchMeal()">Search</button>
+    </div>
 
-<div id="mealResult"></div>
+    <div id="mealResult" class="meal-grid"></div>
 
-<br>
-<a href="planner.html">Go To My Planner</a>
+    <div id="mealDetails"></div>
+
+    <div class="navigation">
+        <button onclick="window.location.href='planner.html'">
+    Go To My Planner
+</button>
+
+</div>
 
 <script src="renderer.js"></script>
 </body>
